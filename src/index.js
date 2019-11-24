@@ -10,7 +10,7 @@ function App() {
   const increment = () => {
     if (timerOn) {
       let interval = setInterval(() => {
-        setCount(count + 1);
+        setCount(prev => prev + 1);
       }, 1000);
 
       return () => clearInterval(interval);
